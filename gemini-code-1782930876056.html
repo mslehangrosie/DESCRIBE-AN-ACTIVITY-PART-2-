@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Speaking Part 3 - Ms Lê Hằng English</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8854C0;
+            --secondary: #FDCB6E;
+            --accent: #00C9A7;
+            --text-dark: #2D3436;
+            --card-bg: rgba(255, 255, 255, 0.92);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #8854C0, #E84393, #00C9A7, #FDCB6E);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Gradient Background */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Pattern Overlay */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.15'%3E%3Cpath d='M10 15L15 10L20 15L15 20Z'/%3E%3Ccircle cx='50' cy='20' r='6'/%3E%3Cpath d='M60 65 L65 60 L70 65 L65 70 Z'/%3E%3Ccircle cx='20' cy='60' r='5'/%3E%3C/g%3E%3C/svg%3E");
+            animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 80px 80px; }
+        }
+
+        header {
+            z-index: 10;
+            text-align: center;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        header h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .alert-box {
+            z-index: 10;
+            background: #FFEAA7;
+            border: 3px solid #FDCB6E;
+            border-radius: 15px;
+            padding: 15px;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+        .alert-box:hover {
+            transform: scale(1.01);
+        }
+
+        .alert-title {
+            color: #D63031;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .alert-text {
+            color: #2D3436;
+            font-weight: 700;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Main Workspace Container */
+        .workspace {
+            z-index: 10;
+            display: flex;
+            max-width: 1100px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            overflow: hidden;
+            border: 6px solid white;
+            min-height: 600px;
+        }
+
+        /* Content Area Left */
+        .content-area {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            max-height: 75vh;
+        }
+
+        /* Sidebar Tabs Right */
+        .tabs-sidebar {
+            width: 280px;
+            background: #F8F9FA;
+            border-left: 4px solid #E9ECEF;
+            overflow-y: auto;
+            max-height: 75vh;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Custom Scrollbar for Right Tabs */
+        .tabs-sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .tabs-sidebar::-webkit-scrollbar-track {
+            background: #F1F1F1;
+            border-radius: 10px;
+        }
+        .tabs-sidebar::-webkit-scrollbar-thumb {
+            background: #DFE6E9;
+            border-radius: 10px;
+        }
+        .tabs-sidebar::-webkit-scrollbar-thumb:hover {
+            background: #B2BEC3;
+        }
+
+        .tab-btn {
+            background: white;
+            border: 3px solid #DFE6E9;
+            padding: 12px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 0 #DFE6E9;
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+            box-shadow: 0 6px 0 rgba(136, 84, 192, 0.3);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: #6C3FB8;
+            box-shadow: 0 4px 0 #512E8A;
+            transform: translateY(2px);
+        }
+
+        /* Content elements */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .topic-header {
+            color: var(--primary);
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            border-bottom: 4px dashed var(--secondary);
+            padding-bottom: 10px;
+        }
+
+        /* Summary Panel for All Questions together */
+        .summary-box {
+            background: #F0EDF9;
+            border-radius: 16px;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border: 2px solid #D1C4E9;
+        }
+        .summary-box h3 {
+            color: #512E8A;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .summary-box ul {
+            list-style-type: none;
+        }
+        .summary-box li {
+            font-weight: 700;
+            color: #2D3436;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .summary-box li::before {
+            content: "❓";
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+
+        /* Method Guide Banner */
+        .method-banner {
+            background: #E8F8F5;
+            border-left: 5px solid var(--accent);
+            padding: 10px 15px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 15px;
+            font-weight: 700;
+            color: #117A65;
+            font-size: 0.95rem;
+        }
+
+        /* Question Item Card */
+        .qa-card {
+            background: white;
+            border: 3px solid #E2E8F0;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.03);
+        }
+
+        .question-text {
+            font-size: 1.15rem;
+            color: #2D3436;
+            font-weight: 800;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .outline-box {
+            background: #FFF9E6;
+            border: 2px dashed var(--secondary);
+            border-radius: 12px;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+        }
+        .outline-title {
+            font-weight: 800;
+            color: #D35400;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .outline-content {
+            font-weight: 600;
+            color: #7F8C8D;
+            font-size: 0.95rem;
+        }
+
+        .sample-box {
+            background: #F4F6F6;
+            border-radius: 12px;
+            padding: 15px;
+            border-left: 5px solid #BDC3C7;
+        }
+        .sample-title {
+            font-weight: 800;
+            color: #34495E;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .sample-content {
+            font-weight: 700;
+            color: #2C3E50;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Paraphrase Table styling */
+        .paraphrase-section {
+            margin-top: 30px;
+        }
+        .paraphrase-section h4 {
+            color: #E84393;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 3px solid #FD79A8;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background: #FD79A8;
+            color: white;
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background: #FFF0F5;
+        }
+        tr:nth-child(odd) {
+            background: white;
+        }
+        td {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .workspace {
+                flex-direction: column;
+            }
+            .tabs-sidebar {
+                width: 100%;
+                max-height: 200px;
+                border-left: none;
+                border-top: 4px solid #E9ECEF;
+            }
+            .content-area {
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern"></div>
+
+    <header>
+        <h2>SPEAKING PART 3 - DESCRIBE A PERSON</h2>
+        <h1>Giáo viên tạo: Ms Lê Hằng English</h1>
+    </header>
+
+    <div class="alert-box">
+        <div class="alert-title">⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</div>
+        <div class="alert-text">
+            SAU KHI HỌC XONG KIẾN THỨC TRONG FILE NÀY, CON HÃY LÊN WEB LUYENNOI ĐỂ THỰC HÀNH ĐỀU ĐẶN MỒI NGÀY (TỐI THIỂU 25 LẦN) VÀ GỬI KẾT QUẢ VÀO NHÓM ZALO. CHỈ CÓ LUYỆN TẬP ĐỀU ĐẶN MỚI GIÚP TĂNG ĐIỂM SPEAKING VÀ TỰ TIN HƠN TRONG PHÒNG THI.
+        </div>
+    </div>
+
+    <div class="workspace">
+        <div class="content-area">
+            
+            <div id="topic1" class="tab-content active">
+                <div class="topic-header">Topic: Doctors Pay & Biology Motivation</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>Do you think doctors should be paid more? Why? (Cách 1)</li>
+                        <li>Do you think doctors should be paid more? Why? (Cách 2)</li>
+                        <li>Why should children learn biology? (Cách 3)</li>
+                        <li>How have learning methods changed over time? (Cách 4)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> Do you think doctors should be paid more? Why?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">high-pressure job / hold lives in hands / many years of intense training</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Personally, I definitely think medical professionals deserve higher salaries. Firstly, their job is extremely high-pressure, as they hold people's lives in their hands every day. Secondly, they have to spend many years undergoing intense training, so a high income is a fair reward."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Do you think doctors should be paid more? Why?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#FEF9E7; color:#B7950B; border-left-color:#F1C40F;">Cách 2: Depends on (Experience & Specialization)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">depends on years of experience / senior doctors vs graduates / specialization / surgeons vs general practitioners</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"I think this disparity depends on experience and specialization. Senior doctors with decades of experience naturally earn more than fresh graduates. Furthermore, specialized fields like brain surgery require higher expertise, so their pay is much higher than general practitioners."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> Why should children learn biology?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">satisfy natural curiosity / understand the world / explore plants and animals / keep them hooked</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Yes, I absolutely think so. This is mainly because biology satisfies children's natural curiosity about the world. For example, when kids learn how plants grow or how animals behave, they feel connected to nature, which keeps them hooked on the subject."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>4.</span> How have learning methods changed over time?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EAF2F8; color:#1B4F72; border-left-color:#2E4053;">Cách 4: Contexts (Methods)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">past: passive learning, memorizing / now: interactive learning, trial and error</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Learning methods have changed significantly. In the past, people learned passively by memorizing facts from textbooks. Currently, people prefer interactive learning and trial-and-error, which helps them understand things deeply through practical experience."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>doctors</td><td>medical professionals</td></tr>
+                            <tr><td>paid more</td><td>deserve higher salaries / high income is a fair reward</td></tr>
+                            <tr><td>hard job</td><td>extremely high-pressure job</td></tr>
+                            <tr><td>learn biology</td><td>satisfy natural curiosity about the world</td></tr>
+                            <tr><td>interested in</td><td>keeps them hooked on the subject</td></tr>
+                            <tr><td>past learning</td><td>learned passively by memorizing facts</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic2" class="tab-content">
+                <div class="topic-header">Topic: An item on which you spent more than expected</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>What kind of things are people happy to pay a high price for? (Cách 1)</li>
+                        <li>Do you think it is the rich people’s responsibility to donate money to people in need? (Cách 3)</li>
+                        <li>Do people buy things they don’t need? (Cách 1)</li>
+                        <li>How can impulse buying be explained? (Deep dive / Contexts overview)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> What kind of things are people happy to pay a high price for?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">high-quality electronic gadgets / smartphones, laptops / memorable life experiences / luxury travel, concerts</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Consumers willingly invest in two main categories. Firstly, high-quality electronic gadgets like smartphones or laptops because they are durable and useful. Secondly, people gladly pay for memorable life experiences, such as luxury travel or music concerts."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Do you think it is the rich people’s responsibility to donate money to people in need?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">not a forced obligation, should be voluntary / encourage charity / act of kindness / bridge wealth gap</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"I don't think it should be a forced legal responsibility, but rather a voluntary act of kindness. Wealthy citizens should be encouraged to donate because their financial contributions can significantly support local charities and bridge the wealth gap."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> Do people buy things they don’t need?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">social media advertisements / peer pressure / emotional shopping / buying things to relieve stress</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Yes, impulse buying is very common today. On the one hand, social media marketing and flash sales trick consumers into buying trendy clothes they rarely wear. On the other hand, many people practice emotional shopping, buying items just to relieve temporary stress."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>happy to pay</td><td>willingly invest in / gladly pay for</td></tr>
+                            <tr><td>rich people</td><td>wealthy citizens</td></tr>
+                            <tr><td>responsibility</td><td>forced legal responsibility / voluntary act of kindness</td></tr>
+                            <tr><td>buy things don't need</td><td>impulse buying / emotional shopping</td></tr>
+                            <tr><td>decrease gap</td><td>bridge the wealth gap</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic3" class="tab-content">
+                <div class="topic-header">Topic: Something important kept in your family for a long time</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>Why do people visit museums? (Cách 1)</li>
+                        <li>What are the benefits of technology for learning history? (Cách 3)</li>
+                        <li>What’s the influence of technology on museums? (Cách 4)</li>
+                        <li>Are family heirlooms important? (General Context)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> Why do people visit museums?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">learn about national history / see actual artifacts / cultural curiosity when traveling</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"People visit museums for two key purposes. Firstly, it's an educational way to learn about national history and view actual ancient artifacts. Secondly, for tourists, museums satisfy their cultural curiosity about a new city."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> What are the benefits of technology for learning history?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">make history interactive / 3D models, virtual reality / vivid experience / no longer boring memorization</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Technology makes history lessons highly interactive. By using 3D models or virtual reality headsets, students can digitally explore ancient castles or historical battles. This vivid experience helps them memorize events much better than traditional books."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> What’s the influence of technology on museums?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EAF2F8; color:#1B4F72; border-left-color:#2E4053;">Cách 4: Contexts (Past vs Now)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">past: dusty glass cases, printed labels / now: QR codes, audio guides, digital displays</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Technology has modernized museum exhibitions. In the past, visitors just looked at dusty glass cases and read printed labels. Currently, museums integrate QR codes and multi-language audio guides, allowing guests to access information easily on their phones."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>old things</td><td>actual ancient artifacts</td></tr>
+                            <tr><td>want to know culture</td><td>satisfy their cultural curiosity</td></tr>
+                            <tr><td>interesting learning</td><td>highly interactive / vivid experience</td></tr>
+                            <tr><td>change museums</td><td>modernized museum exhibitions</td></tr>
+                            <tr><td>old museum style</td><td>dusty glass cases and printed labels</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic4" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A change that you made recently</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>Who tend to change their daily routine more, young people or old people? (Cách 2)</li>
+                        <li>Do people often make plans around their regular routines? (Cách 3)</li>
+                        <li>Is it good for people to get a job promotion? (Cách 1)</li>
+                        <li>How do changes impact lifestyle? (General overview)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> Who tend to change their daily routine more, young people or old people?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#FEF9E7; color:#B7950B; border-left-color:#F1C40F;">Cách 2: Depends on (Life stage)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">young people: adapt to new schedules, universities, jobs / old people: prefer stability, fixed habits</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"I think routine changes depend on the life stage. Young people constantly alter their habits to adapt to new school schedules, part-time jobs, or trends. Conversely, elderly people prefer stability and stick to their fixed morning routines."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Do people often make plans around their regular routines?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">yes, routine is the foundation / schedule appointments around work hours / maximize productivity, avoid disruption</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Yes, most people build new plans around their fixed routines. Since daily habits like working hours or school schedules are unchangeable, any extra activities like meeting friends or going to the gym must be arranged during free gaps to maximize productivity."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> Is it good for people to get a job promotion?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">higher income / professional growth / career advancement / heavier workload, longer hours</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"A career advancement has two sides. Positively, it brings a higher income and professional growth, which boosts job satisfaction. Negatively, a higher position means a heavier workload and longer working hours, leading to less family time."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>change routine</td><td>alter their habits / adapt to new schedules</td></tr>
+                            <tr><td>old people</td><td>elderly people / prefer stability</td></tr>
+                            <tr><td>regular routines</td><td>fixed routines / daily habits</td></tr>
+                            <tr><td>get higher position</td><td>job promotion / career advancement / professional growth</td></tr>
+                            <tr><td>more work</td><td>heavier workload and longer working hours</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic5" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A piece of local news that people are interested in</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>How can people develop their national identity? (Cách 1)</li>
+                        <li>Do you think it's important to have a national identity? (Cách 3)</li>
+                        <li>Do people prefer local or international news? (Cách 2)</li>
+                        <li>What is the role of information in community building? (General Context)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> How can people develop their national identity?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">learn national history / participate in traditional festivals / support local products</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Citizens can build patriotism through simple ways. First, we should study national history and wear traditional clothes like Ao Dai during festivals. Second, actively supporting local products and businesses helps boost the national economy."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Do you think it's important to have a national identity?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">crucial in globalized world / preserve cultural heritage / feel connected / prevent culture loss</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Yes, maintaining a unique identity is crucial in today's globalized world. It helps individuals preserve their cultural heritage and feel connected to their roots. Without a strong national identity, local traditions could easily be washed away by foreign trends."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> Do people prefer local or international news?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#FEF9E7; color:#B7950B; border-left-color:#F1C40F;">Cách 2: Depends on (Age groups)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">older generation: local news, weather, community events / youth: international news, global tech, entertainment</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Preferences depend heavily on age groups. Elderly citizens favor local news because they care about immediate community events, traffic, and local weather. On the contrary, the youth prefer international news regarding global technology or entertainment."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>love country</td><td>build patriotism / national identity</td></tr>
+                            <tr><td>keep traditions</td><td>preserve cultural heritage / connect to roots</td></tr>
+                            <tr><td>global development</td><td>today's globalized world / foreign trends</td></tr>
+                            <tr><td>old people choose</td><td>elderly citizens favor local news</td></tr>
+                            <tr><td>young people choose</td><td>the youth prefer international news</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic6" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A time when you changed an important opinion of yours</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>Who do young people like to share opinions with? (Cách 1)</li>
+                        <li>Do children communicate more with teachers or with parents? (Cách 2)</li>
+                        <li>Whose opinions are more important to children, their parents' or teachers'? (Cách 4)</li>
+                        <li>How do opinions shape mindsets? (General Concept)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> Who do young people like to share opinions with?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">close friends / share similar interests, no judgment / parents / ask for life advice on big decisions</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Teenagers tend to share thoughts with two groups. Mainly, they talk to close friends because they share similar interests and feel free from judgment. However, for serious choices, they still consult parents to get mature guidance."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Do children communicate more with teachers or with parents?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#FEF9E7; color:#B7950B; border-left-color:#F1C40F;">Cách 2: Depends on (Topic)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">academic problems: talk to teachers / personal feelings, hobbies, worries: talk to parents</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"I think the frequency of communication depends on the topic. When it comes to academic problems or exam stress, kids talk more with their teachers. But regarding personal feelings or daily worries, they naturally open up to their parents."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> Whose opinions are more important to children, their parents' or teachers'?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EAF2F8; color:#1B4F72; border-left-color:#2E4053;">Cách 4: Contexts (Situation)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">at school: teacher's voice is absolute, academic advice / at home: parent's views shape morality, life choices</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"The impact varies by context. Inside the classroom, a teacher's advice is more influential because they guide the student's academic path. However, in general life, parents' opinions are far more important because they shape the child's moral values."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>young people</td><td>teenagers / kids / students</td></tr>
+                            <tr><td>share thoughts</td><td>share opinions / consult parents / open up to</td></tr>
+                            <tr><td>no safe rules</td><td>feel free from judgment</td></tr>
+                            <tr><td>school work</td><td>academic problems or exam stress</td></tr>
+                            <tr><td>teach lessons of life</td><td>shape the child's moral values</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic7" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A time when you sent a message or an email but received no reply</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>Why do some people feel angry when others don’t reply to their message? (Cách 3)</li>
+                        <li>How do you show your respect in your messages? (Cách 1)</li>
+                        <li>Why do some people prefer sending a message instead of making a call? (Cách 2)</li>
+                        <li>What is the role of modern messaging etiquette? (General Context)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> Why do some people feel angry when others don’t reply to their message?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">feel ignored, disrespected / assume the recipient doesn't care / causes anxiety if urgent</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"People feel upset because text silence makes them feel ignored and disrespected. They might assume that the recipient doesn't care about the relationship. Furthermore, if the message is urgent, waiting causes unnecessary anxiety."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> How do you show your respect in your messages?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">polite greeting and formal language / avoid texting during late hours / respect personal time</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"We can show courtesy through two habits. Firstly, always use a polite greeting and formal language when messaging teachers or older people. Secondly, avoid sending work or study texts during late hours to respect their personal rest time."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> Why do some people prefer sending a message instead of making a call?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#FEF9E7; color:#B7950B; border-left-color:#F1C40F;">Cách 2: Depends on (Personality / Urgency)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">introverted people: text to organize thoughts / non-urgent matters: text allows recipient to reply anytime</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"This preference depends on personality and urgency. Introverted individuals prefer texting because it allows them to organize their thoughts carefully. Additionally, for non-urgent matters, text messages give the recipient the flexibility to reply whenever they are free."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>not reply</td><td>text silence / received no response</td></tr>
+                            <tr><td>feel bad</td><td>feel ignored and disrespected / causes unnecessary anxiety</td></tr>
+                            <tr><td>polite texting</td><td>show courtesy / polite greeting and formal language</td></tr>
+                            <tr><td>quiet people</td><td>introverted individuals / organize thoughts carefully</td></tr>
+                            <tr><td>free time to answer</td><td>flexibility to reply whenever they are free</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic8" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A time when you were stuck in a traffic jam for a very long time</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>Would you rather be in a car or a bus in a traffic jam? (Cách 3)</li>
+                        <li>Do you like to use public transport? (Cách 1)</li>
+                        <li>What are good ways to manage traffic? (Cách 1)</li>
+                        <li>How urban development resolves transport issues? (General overview)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> Would you rather be in a car or a bus in a traffic jam?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">prefer a car / private space, air conditioner, comfortable seats / listen to favorite music without interruption</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"I would definitely prefer being in a private car. Even though both vehicles are stuck, a car offers a comfortable private space with air conditioning and soft seats. You can listen to your favorite music without being disturbed by crowded strangers on a bus."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Do you like to use public transport?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">highly affordable for students / eco-friendly / reduces carbon footprint / sometimes crowded, slow during rush hours</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"I have mixed feelings. On the positive side, I like using the bus because it's highly affordable for students and helps protect the environment. On the negative side, it can get extremely crowded and slow during rush hours."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> What are good ways to manage traffic?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">upgrade public infrastructure / expand roads / encourage public transport use / implement high parking fees in city centers</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Governments can apply two effective solutions. First, they should upgrade public infrastructure by expanding narrow roads and building metro systems. Second, encouraging bus usage while charging high parking fees in city centers can reduce private cars."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>own car advantages</td><td>comfortable private space / without being disturbed</td></tr>
+                            <tr><td>cheap price</td><td>highly affordable for students</td></tr>
+                            <tr><td>save nature</td><td>eco-friendly / reduces carbon footprint</td></tr>
+                            <tr><td>busy transit time</td><td>crowded and slow during rush hours</td></tr>
+                            <tr><td>fix traffic problems</td><td>upgrade public infrastructure / expand narrow roads</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic9" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A time when you organized a happy event successfully</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>Do you prefer to prepare and organize an activity or just take part in an activity? (Cách 2)</li>
+                        <li>How would you feel when you were not well prepared for something? (Cách 3)</li>
+                        <li>Do people need others’ help when organizing things? (Cách 4)</li>
+                        <li>Why teamwork is essential for planning? (General context)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> Do you prefer to prepare and organize an activity or just take part in an activity?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#FEF9E7; color:#B7950B; border-left-color:#F1C40F;">Cách 2: Depends on (Energy level / Personality)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">introverts: prefer just participating, relax / extroverts: love planning, managing details, rewarding feeling</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"My preference depends on my energy level. Usually, if I'm busy with school, I prefer just participating to relax. However, if it's a close friend's birthday, I love organizing it because managing the party details feels very rewarding."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> How would you feel when you were not well prepared for something?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">extremely anxious and nervous / lose confidence / likely to make silly mistakes during presentations</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"If I'm under-prepared, I instantly feel extremely anxious and nervous. This lack of preparation destroys my confidence, making my mind go blank. As a result, I'm highly likely to make silly mistakes during a test or a presentation."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> Do people need others’ help when organizing things?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EAF2F8; color:#1B4F72; border-left-color:#2E4053;">Cách 4: Contexts (Scale of event)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">small events: birthday dinner, do it alone / large events: school festival, weddings, need a team to divide work</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"The need for assistance varies by scale. For a small event like a family dinner, one person can handle it alone. But for a large event like a school festival, teamwork is compulsory to divide tasks like decoration and sound setup."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>join in</td><td>just participating to relax / take part in</td></tr>
+                            <tr><td>love planning</td><td>managing the party details feels very rewarding</td></tr>
+                            <tr><td>worry a lot</td><td>extremely anxious and nervous / mind go blank</td></tr>
+                            <tr><td>bad mistakes</td><td>highly likely to make silly mistakes</td></tr>
+                            <tr><td>must work together</td><td>teamwork is compulsory to divide tasks</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic10" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A live sports event you watched and liked</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>What sports games are popular in your country? (Cách 1)</li>
+                        <li>Why do some people spend a lot going to other countries to watch sports events? (Cách 3)</li>
+                        <li>What sports matches are suitable for children to attend? (Cách 2)</li>
+                        <li>How live games influence social connections? (General overview)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> What sports games are popular in your country?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">football (soccer) / king sport, national passion / badminton / easy to play in local parks</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Two sports dominate popularity in Vietnam. Undoubtedly, football is the king sport, attracting millions of passionate fans during national matches. Additionally, badminton is highly popular because it's easy for people of all ages to play in local parks."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Why do some people spend a lot going to other countries to watch sports events?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">experience electric stadium atmosphere / see world-class idols in person / combining sports passion with international travel</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Dedicated fans do this to experience the electric atmosphere inside a live stadium, which television cannot replicate. Seeing world-class sports idols in person brings unforgettable excitement, making it worth combining their sports passion with international travel."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> What sports matches are suitable for children to attend?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#FEF9E7; color:#B7950B; border-left-color:#F1C40F;">Cách 2: Depends on (Intensity of the sport)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">high-intensity sports: football, loud crowds, might be unsafe / gentle family sports: swimming, basketball, friendly vibes</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"The suitability depends on the intensity of the sport. Huge football matches might be too loud and chaotic for young children. Instead, gentle indoor matches like basketball or swimming are perfect due to their family-friendly and safe environment."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>very famous sport</td><td>king sport / national passion / dominate popularity</td></tr>
+                            <tr><td>great stadium feeling</td><td>electric atmosphere inside a live stadium</td></tr>
+                            <tr><td>famous players</td><td>world-class sports idols in person</td></tr>
+                            <tr><td>dangerous / loud</td><td>too loud and chaotic for young children</td></tr>
+                            <tr><td>good safe matches</td><td>family-friendly and safe environment / gentle indoor matches</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic11" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A time when you worked in a group</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>How can you tell if a person is a good leader? (Cách 1)</li>
+                        <li>What advantages are there for students experiencing teamwork at school? (Cách 3)</li>
+                        <li>What group tasks are there in schools? (Cách 4)</li>
+                        <li>Why peer collaboration improves presentation success? (General overview)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> How can you tell if a person is a good leader?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">excellent listening skills / value members' opinions / stay calm under pressure / solve team conflicts</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"A competent leader possesses two main qualities. Firstly, they have excellent listening skills and value every member's opinion instead of being bossy. Secondly, they can stay calm under pressure to solve team conflicts effectively."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> What advantages are there for students experiencing teamwork at school?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">develop essential interpersonal skills / communication, negotiation / prepare for future workplaces</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"The biggest benefit is the development of interpersonal skills. When students do group assignments, they learn how to listen to others and negotiate. This prepares them well for the collaborative nature of future professional workplaces."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> What group tasks are there in schools?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EAF2F8; color:#1B4F72; border-left-color:#2E4053;">Cách 4: Contexts (Subject types)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">science subjects: laboratory experiments / social subjects: presentations, history projects</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Group assignments depend on the subject. In science classes, students work in teams to conduct chemistry or biology laboratory experiments safely. Meanwhile, in social subjects like history, they collaborate to make PowerPoint presentations."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>good boss</td><td>competent leader / instead of being bossy</td></tr>
+                            <tr><td>stop fights</td><td>stay calm under pressure / solve team conflicts</td></tr>
+                            <tr><td>social skills</td><td>essential interpersonal skills / communication, negotiation</td></tr>
+                            <tr><td>future job style</td><td>collaborative nature of future professional workplaces</td></tr>
+                            <tr><td>work together for tasks</td><td>conduct laboratory experiments / collaborate to make presentations</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic12" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A time when you got up early</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>What kind of people like getting up early? (Cách 2)</li>
+                        <li>Is it good to arrive early in any situation? (Cách 1)</li>
+                        <li>Why do some people like to stay up late? (Cách 3)</li>
+                        <li>How sleep rhythm alters daily work productivity? (General Context)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> What kind of people like getting up early?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#FEF9E7; color:#B7950B; border-left-color:#F1C40F;">Cách 2: Depends on (Age / Profession)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">elderly people: natural biological clock, do morning exercise / busy workers: avoid rush hour traffic, maximize productivity</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Early rising habits depend on age and lifestyle. Elderly people naturally wake up early due to their biological clocks and love doing morning exercises. Busy professionals also do this to avoid morning traffic jams and maximize their early productivity."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Is it good to arrive early in any situation?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">crucial for formal events / exams, flight check-ins / awkward for casual social gatherings / arriving too early to a friend's party before decoration is finished</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Arriving early is generally good, but it has exceptions. It is crucial for formal situations like job interviews or exams to show professionalism. However, for casual parties, arriving too early might feel awkward as the host might still be busy preparing."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> Why do some people like to stay up late?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">quiet night environment / high concentration / no distractions from notifications or phone calls / peak creativity</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Many night owls prefer staying up late because the night offers a perfectly quiet environment. Without distractions from daily phone calls or family noise, they can achieve high concentration, making it the peak time for creative work or study."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>wake up early</td><td>early rising habits / wake up early due to biological clocks</td></tr>
+                            <tr><td>get high work output</td><td>maximize early productivity / achieve high concentration</td></tr>
+                            <tr><td>important events</td><td>crucial for formal situations / show professionalism</td></tr>
+                            <tr><td>weird / not comfortable</td><td>feel awkward as the host might still be busy</td></tr>
+                            <tr><td>late night people</td><td>night owls / prefer staying up late</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic13" class="tab-content">
+                <div class="topic-header">🏃 Category Activity: A challenging technological problem you faced</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>What can teachers do to stop students from relying too much on AI? (Cách 1)</li>
+                        <li>Do you think students are overly reliant on AI? (Cách 3)</li>
+                        <li>How can AI help in our lives? (Cách 4)</li>
+                        <li>What are potential digital risks in modern schools? (General overview)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> What can teachers do to stop students from relying too much on AI?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">design personalized assignment topics / cannot be answered by generic AI / conduct in-class handwritten tests</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Educators can implement two simple strategies. First, they should design personalized assignment topics that require local knowledge or personal experiences. Second, conducting occasional handwritten tests in class completely prevents AI cheating."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Do you think students are overly reliant on AI?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">yes, critical thinking skills declining / use ChatGPT for basic essays / laziness / lose ability to write independently</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Yes, I am quite worried that student reliance on AI is getting out of hand. Many classmates use ChatGPT to generate basic essays instantly without doing any research. This academic laziness ruins their critical thinking and independent writing skills."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> How can AI help in our lives?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EAF2F8; color:#1B4F72; border-left-color:#2E4053;">Cách 4: Contexts (Application)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">in education: instant personalized tutor / in healthcare: assist doctors to analyze medical images fast</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"AI brings incredible benefits across sectors. In education, it acts as an instant personalized tutor that explains difficult math equations 24/7. In healthcare, AI tools assist doctors to analyze medical images quickly, speeding up patient treatment."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>teachers</td><td>educators / implement simple strategies</td></tr>
+                            <tr><td>too much use</td><td>student reliance on AI is getting out of hand / overly reliant</td></tr>
+                            <tr><td>no thinking</td><td>academic laziness ruins their critical thinking</td></tr>
+                            <tr><td>good tools for study</td><td>instant personalized tutor 24/7</td></tr>
+                            <tr><td>medical AI help</td><td>assist doctors to analyze medical images quickly</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic14" class="tab-content">
+                <div class="topic-header">A special day out that cost you little money/didn’t cost you much</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>Going out to have holidays is tiring. Why do people still want to do it? (Cách 3)</li>
+                        <li>Why do some people like to have days off? (Cách 1)</li>
+                        <li>Do you think only old people have time for leisure? (Cách 4)</li>
+                        <li>How simple vacations balance modern stress? (General Overview)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> Going out to have holidays is tiring. Why do people still want to do it?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">escape daily routines / refresh mental state / experience new cultures / worth physical fatigue</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Despite the physical tiredness, traveling allows people to completely escape their stressful daily routines. Experiencing a new culture and eating local food refreshes their mental state, which makes the journey totally worth the physical fatigue."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> Why do some people like to have days off?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">recharge energy / recover from work or school burnout / spend quality time with family / go outings</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Days off are essential for two primary reasons. Firstly, they give individuals time to recharge their batteries and recover from school burnout. Secondly, it's the perfect opportunity to spend quality time and go on outings with family members."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> Do you think only old people have time for leisure?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EAF2F8; color:#1B4F72; border-left-color:#2E4053;">Cách 4: Contexts (Leisure type)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">old people: daytime leisure, slow pace / young people: weekend leisure, fast pace, night outings</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"Not at all, leisure time exists for everyone but in different contexts. Elderly people have plenty of daytime leisure for slow activities like chess or gardening. Meanwhile, teenagers utilize weekends and evenings for energetic leisure like sports or movie nights."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>stop daily life stress</td><td>completely escape their stressful daily routines</td></tr>
+                            <tr><td>make mind happy</td><td>refreshes their mental state / recharge their batteries</td></tr>
+                            <tr><td>body tired</td><td>worth the physical fatigue / school burnout</td></tr>
+                            <tr><td>free days</td><td>days off / daytime leisure / energetic leisure</td></tr>
+                            <tr><td>hang out with family</td><td>spend quality time and go on outings with family</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="topic15" class="tab-content">
+                <div class="topic-header">A thing you did to learn another language</div>
+                
+                <div class="summary-box">
+                    <h3>Tổng hợp các câu hỏi trong Topic:</h3>
+                    <ul>
+                        <li>Some people think that technology has made it unnecessary to learn languages. What do you think? (Cách 3)</li>
+                        <li>What are the advantages and disadvantages of learning a language? (Cách 1)</li>
+                        <li>What's the best way to learn a language? (Cách 2)</li>
+                        <li>How conversational settings improve language grasp? (General Context)</li>
+                    </ul>
+                </div>
+
+                <div class="method-banner">💡 HOW TO ANSWER: Part 1: Trả lời trực tiếp = paraphrasing the question | Part 2: Expand the questions</div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>1.</span> Some people think that technology has made it unnecessary to learn languages. What do you think?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#F4ECF7; color:#6C3483; border-left-color:#8E44AD;">Cách 3: Deep dive (1 idea)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">translation apps are useful but cannot replace real connection / cultural nuance / emotional communication / fluent conversation</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"I completely disagree with that view. While translation apps are useful for quick tourist questions, they cannot replicate real human connection. Learning a language helps you understand cultural nuances and communicate with emotional depth, which apps cannot do."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>2.</span> What are the advantages and disadvantages of learning a language?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#EBF5FB; color:#2980B9; border-left-color:#3498DB;">Cách 1: List ideas (2 ideas)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">advantage: better career opportunities / international companies / disadvantage: time-consuming, requires immense patience</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"It is a long process with two sides. The main advantage is that it opens up global career opportunities in multinational companies. However, the chief disadvantage is that language learning is highly time-consuming and requires immense daily patience."</div>
+                    </div>
+                </div>
+
+                <div class="qa-card">
+                    <div class="question-text"><span>3.</span> What's the best way to learn a language?</div>
+                    <div class="method-banner" style="margin: 0 0 12px 0; background:#FEF9E7; color:#B7950B; border-left-color:#F1C40F;">Cách 2: Depends on (Learner's preference)</div>
+                    <div class="outline-box">
+                        <div class="outline-title">Outline</div>
+                        <div class="outline-content">depends on learning style / visual learners: watch movies with subtitles / talkative people: join English speaking clubs</div>
+                    </div>
+                    <div class="sample-box">
+                        <div class="sample-title">Sample Answer</div>
+                        <div class="sample-content">"The most effective method depends on individual learning styles. For visual learners, watching foreign movies with subtitles is the best approach. Meanwhile, extroverted students should join English speaking clubs to practice communication directly."</div>
+                    </div>
+                </div>
+
+                <div class="paraphrase-section">
+                    <h4>✨ BẢNG CỤM TỪ PARAPHRASE HAY ĐẠT BAND 7.0+ SPEAKING</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Từ gốc / Ý tưởng</th>
+                                <th>Cụm từ nâng cao (Band 7.0+)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>apps are enough</td><td>cannot replicate real human connection / quick tourist questions</td></tr>
+                            <tr><td>know deep culture</td><td>understand cultural nuances and communicate with emotional depth</td></tr>
+                            <tr><td>get good jobs</td><td>opens up global career opportunities in multinational companies</td></tr>
+                            <tr><td>hard work / long time</td><td>highly time-consuming and requires immense daily patience</td></tr>
+                            <tr><td>good ways for movie fans</td><td>visual learners / watch foreign movies with subtitles</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tabs-sidebar">
+            <button class="tab-btn active" onclick="switchTab(event, 'topic1')">1. Doctors & Biology</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic2')">2. Spent More Item</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic3')">3. Kept Family Item</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic4')">4. Daily Routine Change</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic5')">5. Local News Identity</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic6')">6. Changed Opinion</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic7')">7. No Reply Message</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic8')">8. Heavy Traffic Jam</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic9')">9. Organized Happy Event</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic10')">10. Live Sports Event</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic11')">11. Teamwork Group Task</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic12')">12. Got Up Early Owl</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic13')">13. Tech Problem AI</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic14')">14. Cheap Day Out</button>
+            <button class="tab-btn" onclick="switchTab(event, 'topic15')">15. Learn Another Language</button>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(evt, topicId) {
+            // Hide all tab contents
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            // Remove active class from all buttons
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(topicId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+
+            // Scroll content area back to top
+            document.querySelector('.content-area').scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
